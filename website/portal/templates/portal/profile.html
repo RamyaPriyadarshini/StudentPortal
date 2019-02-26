@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h1>THIS IS PROFILE PAGE</h1>
+{%if user.is_authenticated%}
+    <h3>{{personal.regno}}</h3>
+    <h3>{{personal.name}}</h3>
+    <h3>{{personal.dept}}</h3>
+{%endif%}
+</body>
+</html>

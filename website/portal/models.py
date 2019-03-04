@@ -3,10 +3,18 @@ from django.contrib.auth.models import User
 
 
 class Personal(models.Model):
-    name = models.CharField(max_length=250)
-    dept = models.CharField(max_length=25)
+    Name = models.CharField(max_length=250)
+    Course = models.CharField(max_length=25)
+    Department = models.CharField(max_length=25)
+    Batch = models.IntegerField()
+    RegNo = models.BigIntegerField(primary_key=True)
+    Section = models.CharField(max_length=25)
+    Gender = models.CharField(max_length=7)
+    BloodGroup = models.CharField(max_length=7)
+    StudentMobNo = models.BigIntegerField()
+    StudentMailID = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, unique=True)
-    regno = models.BigIntegerField(primary_key=True)
+    DOB = models.DateField(auto_now=False, auto_now_add=False)
 
     def __str__(self):
-        return self.name + ' - ' + self.dept + ' - ' + str(self.regno)
+        return self.Name + ' - ' + self.Department + ' - ' + str(self.RegNo)

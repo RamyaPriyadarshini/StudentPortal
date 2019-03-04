@@ -12,30 +12,35 @@
 </head>
 <body>
     <div class="row">
-        <div class="col m6 s12">
-
+        <div class="col l6 m12 center-align">
+            <img src="{% static 'users/rmkcetlogo.png' %}">
         </div>
-        <div class="col m6 s12 right">
+        <div class="login col l6 m12 right">
             <form method="POST">
                 {%csrf_token%}
                 <fieldset>
                     <div class="row">
-                        <div class="center-align">
-                            <h3>LOGIN</h3>
+                        <div>
+
                         </div>
-                        <div id="div_id_username" class="input">
-                            <label for="id_username" class="required">Username</label>
-                            <input type="text" name="username" autofocus maxlength="254" class="textinput textInput" required id="id_username" />
+                        <div>
+                            <div>
+                                <h3>LOGIN</h3>
+                            </div>
+                            <div id="div_id_username" class="input">
+                                <label for="id_username" class="required">Username</label>
+                                <input type="text" name="username" autofocus maxlength="254" class="textinput textInput" required id="id_username" />
+                            </div>
+                            <div id="div_id_password" class="input">
+                                <label for="id_password" class="required">Password</label>
+                                <input type="password" name="password" class="textinput textInput" required id="id_password" />
+                            </div>
+                            <div class="submit">
+                              <button class="btn waves-effect waves-light" type="submit" name="action">
+                                Submit
+                              </button>
+                            </div>
                         </div>
-                        <div id="div_id_password" class="input">
-                            <label for="id_password" class="required">Password</label>
-                            <input type="password" name="password" class="textinput textInput" required id="id_password" />
-                        </div>
-                    </div>
-                    <div class="center-align">
-                      <button class="btn waves-effect waves-light" type="submit" name="action">
-                        Submit
-                      </button>
                     </div>
                 </fieldset>
             </form>

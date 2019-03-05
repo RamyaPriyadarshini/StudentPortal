@@ -15,6 +15,7 @@ class Personal(models.Model):
     StudentMailID = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, unique=True)
     DOB = models.DateField(auto_now=False, auto_now_add=False)
+    Address = models.CharField(max_length=500)
 
     def __str__(self):
         return self.Name + ' - ' + self.Department + ' - ' + str(self.RegNo)

@@ -107,18 +107,37 @@
                         </table>
                     </div>
                     <div id = "attendance" class = "col s12">
+                        <div class="row">
+                        <div class="col s4">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>{{personal.Name}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Department</th>
+                                    <td>{{personal.Department}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Section</th>
+                                    <td>{{personal.Section}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
                         <div class="tabsem">
-                           <button class="tabsemlinks" onclick="openCity(event, '1')">1</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '2')">2</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '3')">3</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '4')">4</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '5')">5</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '6')">6</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '7')">7</button>
-                           <button class="tabsemlinks" onclick="openCity(event, '8')">8</button>
+
+                           <button class="tabsemlinks" onclick="openCity(event, '1')"> I</button>
+                           <button class="tabsemlinks" onclick="openCity(event, '2')"> II</button>
+                           <button class="tabsemlinks" onclick="openCity(event, '3')"> III </button>
+                           <button class="tabsemlinks" onclick="openCity(event, '4')"> IV</button>
+                           <button class="tabsemlinks" onclick="openCity(event, '5')"> V</button>
+                           <button class="tabsemlinks" onclick="openCity(event, '6')"> VI </button>
+                           <button class="tabsemlinks" onclick="openCity(event, '7')"> VII </button>
+                           <button class="tabsemlinks" onclick="openCity(event, '8')"> VIII </button>
                         </div>
                         <div id="1" class="tabsemcontent">
-                           <h3>1</h3>
+                           <h3>{{leave}}</h3>
                         </div>
                         <div id="2" class="tabsemcontent">
                            <h3>2</h3>

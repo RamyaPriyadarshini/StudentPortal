@@ -19,3 +19,9 @@ class Personal(models.Model):
 
     def __str__(self):
         return self.Name + ' - ' + self.Department + ' - ' + str(self.RegNo)
+
+
+class Leave(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField(auto_now=False, auto_now_add=False)
+    leavType = models.CharField(max_length=50)
